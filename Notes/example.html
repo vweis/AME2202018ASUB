@@ -2,34 +2,76 @@
 <html>
 <head>
 	<style>
-		a{
-			color:red;
-			font-size:30px;
+		body {
+		   background-image: url("paper.gif");
+		   background-color: #1e1e1e;
+		   color: #ffffff;
+		   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 		}
 		img{
-			width:300px;
-			height:300px;
+			width:24em;
+			height:16em;
 		}
+		ul {
+		    list-style-type: none;
+		    margin: 0em;
+		    padding: 0em;
+			overflow: scroll;
+			background-color: #101010;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		li.NavBar {
+		    display: inline;
+			float: left;
+		}
+		li.NavBar a {
+			color:deeppink;
+			font-size:1.875em;
+			text-align: center;
+		    display: block;
+		    padding: 0.625em 0.5em 0.625em 0.5em;
+			text-decoration: none;
+			float: none;
+		}
+		li.NavBar a:hover{
+			background-color: #aaaaaa;
+		}
+		#Title{
+			font-size:6em;
+			color: deeppink;
+			padding: 0.1em 0.5em;
+			margin: 0em;
+			clear: bottom;
+		}
+
 	</style>	
 </head>
 
 <body>
 
-<img  src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
-
-<h1>My First Heading</h1>
-
-<h1 class='heading big' id='firstHeading'>This is heading 1</h1>
-<h2 class='heading small' id='secondHeading'>This is heading 2</h2>
-<h3>This is heading 3</h3>
-<h7>This is heading 7</h7>
-
-<a style='' href='https://asu.edu' title="I'm a tooltip"">ASU.edu</a>
 
 
-<p>My first paragraph.</p>
+<ul>
+	<li class="NavBar"><h1 id='Title'>Vintz</h1>
+	<li class="NavBar"><a href="default.asp">Home</a></li>
+	<li class="NavBar"><a href="news.asp">News</a></li>
+	<li class="NavBar"><a href="contact.asp">Contact</a></li>
+	<li class="NavBar"><a href="about.asp">About</a></li>
+</ul>
+
+
+<div style="padding: 10em 3em;">
+	<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"> 
+	<h1 class='heading big' id='firstHeading'>This is heading 1</h1>
+	<a style='color:red;' href='https:www.youtube.com' target="_blank" title="I'm a tooltip">YouTube</a>
+	<p>My first paragraph.</p>
+</div>
 
 </body>
+
 </html>
 
 
