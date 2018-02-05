@@ -1,0 +1,32 @@
+#ssContainer{
+	height: calc(100% - 6.25em);
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+#ssContainer img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#numContainer{
+	position: absolute;
+	bottom: 1.25em;
+	left: 1.25em;
+}
+#numContainer button{
+	width: 50px;
+	height: 50px;
+	font-size: 45px;
+}
+#arrowContainer{
+	position: absolute;
+	bottom: 1.25em;
+	right: 1.25em;
+}
+#arrowContainer button{
+	width: 50px;
+	height: 50px;
+	font-size: 45px;
+}
