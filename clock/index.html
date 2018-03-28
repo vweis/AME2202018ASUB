@@ -38,6 +38,10 @@
 		position: absolute;
 		transform-origin: 0px 150px;
 	}
+	#timeString{
+		text-align: center
+
+	}
 </style>
 
 <script>
@@ -54,6 +58,8 @@
 		document.getElementById("hour").style.transform = 'translate(150px, 50px) rotate(' + ha + 'deg)'
 		document.getElementById("min").style.transform = 'translate(150px, 20px) rotate(' + ma + 'deg)'
 		document.getElementById("sec").style.transform = 'translate(150px) rotate(' + sa + 'deg)'
+		document.getElementById("timeString").innerHTMP = h + ":" + m + ":" + s;
+		
 	}
 	
 	function start(){
@@ -64,6 +70,11 @@
 		}
 		displayTime();
 		setInterval("displayTime()", 1000);
+	}
+
+	function get2digit(myNumber)
+	{
+		return ("0" + myNumber).slice(-2);
 	}
 </script>
 
@@ -88,6 +99,9 @@
 		<div class='hand' id='min'></div>
 		<div class='hand' id='sec'></div>
 	</div>
+	<div id='timeString'></div>
+	
+	<select name='DropDownTimezone' id='DropDownTimezone'></select>
 </body>
 
 </html>
