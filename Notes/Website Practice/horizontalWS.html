@@ -66,14 +66,31 @@
 			left: 0;
 			width: 100%;
 		}
+		li.BottomBar h4{
+			color: deeppink;
+			font-size: calc(var(--NavBarSize) * 5/10);
+			text-align: center;
+		    display: block;
+			margin: 0;
+		    padding: calc(var(--NavBarSize) / 40) calc(var(--NavBarSize) / 6) calc(var(--NavBarSize) / 40) calc(var(--NavBarSize) / 6);
+			text-decoration: none;
+			float: left;
+		}
 	</style>	
+	<script>
+		function start(){
+			var today = new Date();
+			var dateMarkup = (today.getMonth()+1) + '/' + today.getDate() + '/' + today.getFullYear();
+			document.getElementById('date').innerHTML = dateMarkup;
+		}
+	</script>
 </head>
 
-<body>
+<body onload='start()'>
 
 
 <ul class="NavBar">
-	<li class="NavBar"><h1 id='Title'>Vintz</h1>
+	<li class="NavBar"><h1 id='Title'>Vintz</h1></li>
 	<li class="NavBar"><a href="default.asp">Home</a></li>
 	<li class="NavBar"><a href="news.asp">News</a></li>
 	<li class="NavBar"><a href="contact.asp">Contact</a></li>
@@ -89,10 +106,7 @@
 </div>
 
 <ul class="BottomBar">
-	<li class='BottomBar'><h4 id='demo'><h4 id='demo'><script>var today = new Date(); 
-		today = today.getMonth()+1 + '/' + today.getDate() + '/' + today.getFullYear();
-		document.write(today);</script>
-		</li>
+	<li class='BottomBar'><h4 id='date'></h4></li>
 	<li class='BottomBar'></li>
 	<li class='BottomBar'></li>
 	<li class='BottomBar'></li>

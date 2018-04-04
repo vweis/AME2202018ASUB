@@ -6,7 +6,7 @@
 Start with
 [this
 code](https://github.com/tejaswigowda/ame2202018/tree/master/wordCloud)
-and make sure yoiu generate appropriate wordclouds.
+and make sure you generate appropriate wordclouds.
 
 ## Submission
 Demo in class.
