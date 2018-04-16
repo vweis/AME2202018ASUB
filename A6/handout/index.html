@@ -13,6 +13,11 @@
   body{
     margin: 0px;
   }
+  p{
+    margin:0px;
+    float: right;
+    word-wrap:break-word;
+  }
   #timezoneSelection{
     position: fixed;
     min-width: 100%;
@@ -42,7 +47,7 @@ function aTZSelected(n){
   var offset = dataStore[n].offset;
   
   var markup = "<h1>" + name + "</h1>"+
-      "<iframe style='width: 100%;height: 500px;border: none;' src='./embedclock.html#" + offset + "'>"
+      "<iframe style='width: 100%;height: 500px;border: none;' src='./embedclock.html#" + offset + "'></iframe>"
       
   document.getElementById("theSelectedWraper").innerHTML = markup;
 
@@ -59,7 +64,7 @@ function aTZSelected(n){
     
     var markup = "";
     for(var i = 0; i < dataStore.length; i++){
-        markup += "<button class='tzCard' onclick='aTZSelected(" + i + ")'>" + dataStore[i].name + "</button>";
+        markup += "<button class='tzCard' onclick='aTZSelected(" + i + ")'><iframe style='width: 334px;height: 334px; float:left;border: none; transform: scale(0.15,0.15);transform-origin: 0px 0px;margin-bottom:-334px;' src='./embedclock.html#" + dataStore[i].offset + "'></iframe><p style='width:200px;height:50px;'>" + dataStore[i].name + "</p></button>";
     }
     console.log(markup);
     document.getElementById("theList").innerHTML = markup;
