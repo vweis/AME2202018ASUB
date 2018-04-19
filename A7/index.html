@@ -2,7 +2,7 @@
 
 <head>
 <script src='jquery-2.1.3.js'> </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+<link rel="stylesheet" href="animate.min.css">
 
 <style>
   .animationList{
@@ -14,11 +14,8 @@
   }
   #target {
   -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: infinite;
-  -moz-animation-duration: 3s;
-  -moz-animation-delay: 2s;
-  -moz-animation-iteration-count: infinite;
 }
   body{
     margin: 0px;
@@ -43,9 +40,11 @@
     background: lightgray;
   }
   #theSelectedWraper{
-    width: calc(100% - 250px);
+    width: 400px;
     float: right;
-    height: 100%;
+    position: absolute;
+    height: 400px;
+    margin:5% 35% 0% 20%;
   }
   .active{
     background: gold;
@@ -53,8 +52,7 @@
 </style>
 <script>
 function animationSelect(selected){
-  var markup = "<h1>" + name + "</h1>"+
-      "<div class='animated infinite " + selected + "' id='target' style='width:500px;height:500px;background-color:red;'></div>"
+  var markup = "<div class='animated infinite " + selected + "' id='target' style='width:400px;height:400px;background-color:red;'></div>"
   document.getElementById("theSelectedWraper").innerHTML = markup
 
   $(".animationList").removeClass("active");
@@ -62,21 +60,25 @@ function animationSelect(selected){
 }
 
 function start(){
-    animationSelect();
+    animationSelect('');
 }
 </script>
 </head>
 
 <body onload='start()'>
   <div id='theListWraper'>
-    <h1> WORLD CLOCK <h1>
+    <h1> Animate.css <h1>
 
     <div id='theList'>
-        <button class='animationList' id='bounce' onclick='animationSelect(bounce)'>bounce</button>
-        <button class='animationList' id='flash' onclick='animationSelect(flash)'>flash</button>
-        <button class='animationList' id='tada' onclick='animationSelect(tada)'>tada</button>
-        <button class='animationList' id='fadeIn' onclick='animationSelect(fadeIn)'>fadeIn</button>
-        <button class='animationList' id='fadeOut' onclick='animationSelect(fadeOut)'>fadeOut</button>   
+        <button class='animationList' onclick="animationSelect('bounce')">bounce</button>
+        <button class='animationList' onclick="animationSelect('flash')">flash</button>
+        <button class='animationList' onclick="animationSelect('tada')">tada</button>
+        <button class='animationList' onclick="animationSelect('fadeIn')">fadeIn</button>
+        <button class='animationList' onclick="animationSelect('fadeOut')">fadeOut</button>
+        <button class='animationList' onclick="animationSelect('shake')">shake</button>
+        <button class='animationList' onclick="animationSelect('jello')">jello</button>   
+        <button class='animationList' onclick="animationSelect('lightSpeedIn')">lightSpeedIn</button>
+        <button class='animationList' onclick="animationSelect('hinge')">hinge</button>
     </div>
   </div>
 <div id='theSelectedWraper'></div>
